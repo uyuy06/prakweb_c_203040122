@@ -14,11 +14,10 @@ if (isset($_POST['cari'])) {
 <head>
 	<title>Daftar Buku</title>
 	<!-- CSS only -->
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 
-
-<body class ="center" >
+<body>
 	<div class="container">
 		<h3 >Daftar Buku</h3>
 		<a href="tambah.php">Tambah Data Mahasiswa</a>
