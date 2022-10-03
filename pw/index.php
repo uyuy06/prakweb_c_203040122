@@ -3,6 +3,11 @@ require 'functions.php';
 
 // query isi tabel
 $buku = query("SELECT * FROM buku");
+
+//ketika tombol cari di klik
+if (isset($_POST['cari'])) {
+	$buku = cari($_POST['keyword']);
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,6 +59,7 @@ $buku = query("SELECT * FROM buku");
 				<td><img src="assets/<?= $bk['gambar_buku']; ?>" width = "80"></td>
 				<td>
 				<a href="ubah.php?id=<?= $bk['id']; ?>">ubah</a>
+				<a href="hapus.php?id=<?= $bk['id']; ?>">hapus</a>
 			</td>
 			</tr>
 			<?php endforeach; ?>

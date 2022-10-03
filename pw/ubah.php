@@ -11,7 +11,7 @@ if (!isset($_GET['id'])) {
 $id = $_GET['id'];
 
 // query mahasiswa berdasarkan id
-$buku = query("SELECT * FROM buku WHERE id = $id");
+$bk = query("SELECT * FROM buku WHERE id = $id");
 
 // cek apakah tombol tambah sudah ditekan
 if (isset($_POST['ubah'])) {
@@ -36,35 +36,35 @@ if (isset($_POST['ubah'])) {
     <h3>Form Ubah Data Buku</h3>
     <form action="" method="POST">
         <ul>
-          <input type="hidden" name="id" value="<?= $buku['id']; ?>">
+          <input type="hidden" name="id" value="<?= $bk['id']; ?>">
             <li>
                 <label>
                   Nama Buku :
-                  <input type="text" name="nama_buku" required value="<?= $buku['nama_buku']; ?>">
+                  <input type="text" name="nama_buku" autofocus required value="<?= $bk['nama_buku']; ?>">
                 </label><br><br>
             </li>
             <li>
                 <label>
                   Pengarang :
-                  <input type="text" name="nama_pengarang" autofocus required value="<?= $buku['nama_pengarang']; ?>">
+                  <input type="text" name="nama_pengarang" required value="<?= $bk['nama_pengarang']; ?>">
                 </label><br><br>
             </li>
             <li>
                 <label>
                   Jumlah Lembar :
-                  <input type="text" name="jumlah_lembar" required value="<?= $buku['jumlah_lembar']; ?>">
+                  <input type="text" name="jumlah_lembar" required value="<?= $bk['jumlah_lembar']; ?>">
                 </label><br><br>
             </li>
             <li>
                 <label>
                   Penerbit :
-                  <input type="text" name="penerbit" required value="<?= $buku['penerbit']; ?>">
+                  <input type="text" name="penerbit" required value="<?= $bk['penerbit']; ?>">
                 </label><br><br>
             </li>
             <li>
                 <label>
                   Gambar :
-                  <input type="text" name="gambar_buku" required value="<?= $buku['gambar_buku']; ?>">
+                  <input type="text" name="gambar_buku" required value="<?= $bk['gambar_buku']; ?>">
                 </label><br><br>
             </li>
             <li>
